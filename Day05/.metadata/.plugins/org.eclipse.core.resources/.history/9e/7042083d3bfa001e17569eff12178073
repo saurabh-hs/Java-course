@@ -1,0 +1,12 @@
+package com.app;
+
+//Calculate the avg marks from an array containing marks of all students in Physics using for-each loop
+
+public class CalculateAvgMarks {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

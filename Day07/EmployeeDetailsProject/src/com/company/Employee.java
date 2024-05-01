@@ -1,0 +1,54 @@
+package com.company;
+
+public class Employee {
+	protected String name;
+	protected String jobTitle;
+	protected double salary;
+	
+	public Employee() {
+		this.name = "None";
+		this.jobTitle = "None";
+		this.salary = 0.0;
+	}
+	
+	public Employee(String name, String jobTitle, double salary) {
+		this.name = name;
+		this.jobTitle = jobTitle;
+		this.salary = salary;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+	
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public String getJobTitle() {
+		return this.jobTitle;
+	}
+	
+	public double getSalary() {
+		return this.salary;
+	}
+
+	public String getDetails() {
+		return "Employee [name=" + name + ", jobTitle=" + jobTitle + ", salary=" + salary + "]";
+	}
+	
+	public double increaseSalary(double percentage) {
+		
+		this.salary = this.salary + (this.salary / percentage);
+		
+		return this.salary;
+	}
+}

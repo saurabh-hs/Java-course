@@ -1,0 +1,12 @@
+package com.app;
+
+//Write a function to find average of a set of numbers passed as arguments
+
+public class FindAvgSetNoPassedAsArguments {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

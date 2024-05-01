@@ -1,0 +1,12 @@
+package com.app;
+
+//Write a program to find out whether a given integer is present in an array or not
+
+public class NumberPresentInArrayorNot {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

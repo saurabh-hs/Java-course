@@ -1,0 +1,23 @@
+package com.app;
+
+// Write a program to print the following pattern:
+// *****
+// ****
+// ***
+// **
+// *
+
+public class PrintPattern {
+
+    public static void main(String[] args) {
+        // Loop through each row
+        for (int i = 5; i > 0; i--) { // Changed loop condition to 5 to match the desired pattern
+            // Loop to print '*' for each row
+            for (int j = 0; j < i; j++) { // Changed loop condition to '< i' for decreasing stars
+                System.out.print("*"); // Removed space after '*'
+            }
+            System.out.println(); // Move to the next line after each row
+        }
+    }
+}
+

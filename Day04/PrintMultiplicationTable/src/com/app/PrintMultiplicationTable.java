@@ -1,0 +1,32 @@
+package com.app;
+
+import java.util.Scanner;
+
+//Write a program to print multiplication table of a given number n.
+
+public class PrintMultiplicationTable {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		try {
+		System.out.println("Please enter number : ");
+		int number = scanner.nextInt();
+		
+		System.out.println("Table of "+number+" is : ");
+		for(int i =1; i < 11; i++) {
+			
+			System.out.print(number * i+" ");
+			
+		}
+		} catch(Exception e) {
+			
+			System.out.println("Invalid input!! Please enter valid number");
+			
+		} finally {
+			scanner.close();
+		}
+				
+	}
+
+}

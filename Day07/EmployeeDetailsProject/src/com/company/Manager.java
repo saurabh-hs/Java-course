@@ -1,0 +1,35 @@
+package com.company;
+
+public class Manager extends Employee {
+	private String department;
+	
+	public Manager() {
+		this.name = "None";
+		this.jobTitle = "None";
+		this.salary = 0.0;
+		this.department = "None";
+	}
+	
+	public Manager(String name, String jobTitle, double salary, String department) {
+		super(name, jobTitle, salary);
+		this.department = department;
+	}
+	
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	
+	public String getDepartment() {
+		return this.department;
+	}
+
+	@Override
+	public String getDetails() {
+		return super.getDetails() + "[department=" + department + "]";
+	}
+	
+	public String assignDepartment(String department) {
+		return this.department = department;
+	}
+		
+}

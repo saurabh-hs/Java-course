@@ -1,0 +1,50 @@
+package com.app;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+//Write a program to find factorial of a given number using for loop.
+
+public class FindFactorialOfGivenNumber {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		try {
+			System.out.println("Please enter a number : ");
+			int num = scanner.nextInt();
+			int fact = 1;
+			
+			if(num != 0) {
+				for(int i = 1; i <= num; i++) {
+					fact = fact * i;
+				}
+				System.out.println("Factorial of a "+num+" is "+fact);
+			}else {
+				if(num < 0) {
+					
+					System.out.println("Invalid input!! Please enter positive number");
+					
+				} else {
+					
+					System.out.println("Factorial of a 0 is 1");
+				
+				}
+				
+			}
+			
+		} catch(InputMismatchException e) {
+			
+			System.out.println("Invalid input!! InputMismatchException");
+			
+		} catch (Exception e) {
+			
+			System.out.println("Generic catch block");
+			
+		} finally {
+			scanner.close();
+		}
+
+	}
+
+}

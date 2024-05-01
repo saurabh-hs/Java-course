@@ -1,0 +1,69 @@
+package com.app;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+//write a java program to find minimum and maximum element in the array
+
+public class FindMaxMinElement {
+	private static final Scanner scanner = new Scanner(System.in);
+	private static int arraySize;
+	
+	public static void main(String[] args) {
+		
+		try {
+			System.out.println("Please enter array size : ");
+			arraySize = scanner.nextInt();
+			
+			int[] arr = new int[arraySize];
+			
+			System.out.println("Please enter array elements : ");
+			acceptArrayElements(arr);
+			
+			int minElement = searchMinElementInArray(arr);
+			int maxElement = searchMaxElementInArray(arr);
+			
+			System.out.println("Minimum element: "+minElement); 
+			System.out.println("Maximum element: "+maxElement);
+			
+		}catch(InputMismatchException e) {
+			
+			System.out.println("Invalid input!! Please enter valid input");
+			
+		}catch(Exception e) {
+			
+			System.out.println("An error occured : "+e.getMessage());
+			
+		}finally {
+			scanner.close();
+		}
+
+	}
+	
+	public static void acceptArrayElements(int[] arr) {
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] = scanner.nextInt();
+		}
+	}
+	
+	public static int searchMinElementInArray(int[] arr) {
+		int min = arr[0];
+		for(int i=1; i < arr.length; i++) {
+				if(min > arr[i]) 
+					min = arr[i];
+		}
+		
+		return min;
+	}
+	
+	public static int searchMaxElementInArray(int[] arr) {
+		int max = arr[0];
+		for(int i=1; i < arr.length; i++) {
+				if(max < arr[i]) 
+					max = arr[i];
+		}
+		
+		return max;
+	}
+
+}

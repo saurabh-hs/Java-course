@@ -1,0 +1,32 @@
+package com.app;
+
+//Write a function to find average of a set of numbers passed as arguments
+
+public class FindAvgSetNoPassedAsArguments {
+
+	public static void main(String[] args) {
+		if(args.length == 0) {
+			System.out.println("Please provide at least one number as an argumnet.");
+			return;
+		}
+		
+		int count = args.length;
+		int sum = 0;
+		
+		for(String arg : args) {
+			try {
+				int number = Integer.parseInt(arg);
+				sum += number;
+				
+			}catch(NumberFormatException _ex) {
+				System.out.println("Invalid input: " + arg + " is not a valid integer.");
+				return;
+			}
+		}
+		
+		double avg = sum / count;
+		System.out.println("The average is: "+avg);
+
+	}
+
+}
