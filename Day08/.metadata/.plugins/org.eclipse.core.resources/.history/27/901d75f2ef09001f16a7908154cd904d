@@ -1,0 +1,50 @@
+package com.system;
+
+public class Library extends Member {
+	protected String name;
+	protected String address;
+	
+	public Library() {
+		this.name = "None";
+		this.address = "None";
+	}
+	
+	public Library(int memberID, String memberName, String email, int phone, String borrowedBooks, String name, String address) {
+		super(memberID, memberName, email, phone, borrowedBooks);
+		this.name = name;
+		this.address = address;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	public void addBooks(String name, String address) {
+		this.name = name;
+		this.address = address;
+	}
+	
+	public void addMembers(Member m) {
+		this.memberID = m.memberID;
+		this.memberName = m.memberName;
+		this.email = m.email;
+		this.phone = m.phone;
+		this.borrowedBooks = m.borrowedBooks;
+		System.out.println("Member is added successfully to Library!!");
+	}
+	
+	public void issueBook()
+
+}

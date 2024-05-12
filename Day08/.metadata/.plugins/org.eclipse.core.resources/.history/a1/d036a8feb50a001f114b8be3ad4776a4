@@ -1,0 +1,90 @@
+package com.system;
+
+public class Book {
+	protected int ISBN;
+	protected String title;
+	protected String author;
+	protected String publisher;
+	protected int year;
+	
+	public Book() {
+		this.ISBN = 0;
+		this.title = "None";
+		this.author = "None";
+		this.publisher = "None";
+		this.year = 0;
+	}
+	
+	public Book(int ISBN, String title, String author, String publisher, int year) {
+		this.ISBN = ISBN;
+		this.title = title;
+		this.author = author;
+		this.publisher = publisher;
+		this.year = year;
+	}
+
+	public int getISBN() {
+		return ISBN;
+	}
+
+	public void setISBN(int iSBN) {
+		ISBN = iSBN;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getPublisher() {
+		return publisher;
+	}
+
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+	
+	public void addBooks(int ISBN, String title, String author, String publisher, int year) {
+		this.ISBN = ISBN;
+		this.title = title;
+		this.author = author;
+		this.publisher = publisher;
+		this.year = year;
+		
+		System.out.println("Book is added successfully!!");
+	}
+	
+	public String getBooksByAuthor(String author) {
+		if(this.author == author)
+			return this.title;
+		else
+			return "Book is not available!!";
+	}
+	
+	public String getPublisherBookList(String publisher) {
+		if(this.publisher == publisher)
+			return this.title;
+		else
+			return "Book is not available!!";
+	}
+
+}

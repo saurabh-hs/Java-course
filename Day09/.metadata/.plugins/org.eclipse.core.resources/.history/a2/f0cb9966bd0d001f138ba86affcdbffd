@@ -1,0 +1,44 @@
+package com.app;
+
+import java.util.Scanner;
+
+/*
+ * Write a Java program that prompts the user to enter two numbers and a basic arithmetic operation (like +, -, *, /). 
+ * Use if-else statements to determine which operation to perform and then display the result. 
+ * Handle division by zero appropriately.
+ */
+
+public class SimpleCalculator {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Please enter first number: ");
+		int num1 = sc.nextInt();
+		
+		System.out.println("Please enter second number: ");
+		int num2 = sc.nextInt();
+		
+		System.out.println("Please enter sysmbol which operation to be perform like '+','-','*','/': ");
+		String operation = sc.next();
+		
+		if(operation.equals("+")) 
+			System.out.println("Addition : "+(num1+num2));
+		else
+			if(operation.equals("-"))
+				System.out.println("Substraction : "+(num1-num2));
+			else
+				if(operation.equals("*"))
+					System.out.println("Multiplication :"+(num1*num2));
+				else
+					try {
+						if(operation.equals("/"))
+							System.out.println("Division: "+(num1/num2));
+					}catch(ArithmeticException e) {
+						System.out.println(e.getMessage());
+					}
+		
+		sc.close();
+	}
+
+}

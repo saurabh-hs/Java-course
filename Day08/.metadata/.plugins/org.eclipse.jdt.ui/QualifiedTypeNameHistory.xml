@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.system.Library"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.system.Book"/>
+    <fullyQualifiedTypeName name="com.system.Member"/>
+    <fullyQualifiedTypeName name="com.system.Librarian"/>
+</qualifiedTypeNameHistroy>

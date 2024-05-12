@@ -1,0 +1,67 @@
+package com.system;
+
+public class Member {
+	protected int memberID;
+	protected String name;
+	protected String email;
+	protected int phone;
+	protected String borrowedBooks;
+	
+	public Member() {
+		this.memberID = 0;
+		this.name = "None";
+		this.email = "None";
+		this.phone = 0;
+		this.borrowedBooks = "None";
+	}
+	
+	public Member(int memberID, String name, String email, int phone, String borrowedBooks) {
+		this.memberID = memberID;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.borrowedBooks = borrowedBooks;
+	}
+
+	public int getMemberID() {
+		return memberID;
+	}
+
+	public void setMemberID(int memberID) {
+		this.memberID = memberID;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getPhone() {
+		return phone;
+	}
+
+	public void setPhone(int phone) {
+		this.phone = phone;
+	}
+
+	public String getBorrowedBooks() {
+		return borrowedBooks;
+	}
+
+	public void setBorrowedBooks(String borrowedBooks) {
+		this.borrowedBooks = borrowedBooks;
+	}
+	
+	
+}

@@ -1,0 +1,47 @@
+package com.app;
+
+import java.util.Scanner;
+
+import com.system.Book;
+import com.system.Library;
+
+/*
+Classes
+1. Library
+Attributes: name, address
+Methods: getSpecificLibrary
+2. Book
+Attributes: ISBN, title, author, publisher, year, copiesAvailable
+Methods: addBook, getBooksByAuthor, getPublisherBookList
+3. Member
+Attributes: memberID, name, email, phone, borrowedBooks
+Methods: addMember, getMemberDetails, getBorrowedBookDetails
+4. Librarian
+Attributes: employeeID, name, email, phone
+Methods: getLibrarianDetails, getLibrarianEmail
+5. Transaction
+Attributes: transactionID, book, member, issueDate, returnDate
+Methods: getTransactionDetails, completeTransaction
+
+
+Add sample Data for all classes
+*/
+
+
+public class LibraryManagementSystem {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Please enter library name & Address: ");
+		Library lb = new Library(scanner.next(), scanner.nextLine());
+		
+		System.out.println(lb.getSpecificLibrary(scanner.next()));
+		
+		Book b = new Book();
+		
+		
+
+	}
+
+}

@@ -1,0 +1,40 @@
+package com.app;
+
+/*
+Classes
+1. Library
+Attributes: name, address
+Methods: addBook, addMember, issueBook, returnBook, getBooks, getMembers
+2. Book
+Attributes: ISBN, title, author, publisher, year, copiesAvailable
+Methods: getDetails, reserve, release, updateCopies
+3. Member
+Attributes: memberID, name, email, phone, borrowedBooks
+Methods: borrowBook, returnBook, getBorrowedBooks
+4. Librarian
+Attributes: employeeID, name, email, phone
+Methods: addBook, removeBook, issueBook, returnBook
+5. Transaction
+Attributes: transactionID, book, member, issueDate, returnDate
+Methods: getTransactionDetails, completeTransaction
+
+
+Create Classes and Objects:
+Implement the Library, Book, Member, Librarian, and Transaction classes with appropriate attributes and methods.
+Add Books and Members:
+Create a method in the Library class to add new books and new members. Test this method by adding some sample data.
+Issue and Return Books:
+Implement methods in the Library class to issue and return books to/from members. Use the Transaction class to track these activities.
+Borrowed Books and Transactions:
+Create a method in the Member class to track borrowed books. Also, implement a method to retrieve all transactions for a given book or member.
+*/
+
+
+public class LibraryManagementSystem {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
