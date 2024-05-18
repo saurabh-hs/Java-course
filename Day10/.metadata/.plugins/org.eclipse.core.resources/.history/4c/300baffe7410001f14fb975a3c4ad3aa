@@ -1,0 +1,30 @@
+package com.app;
+
+import java.util.Scanner;
+
+/*
+ * Develop a Java program to print the Fibonacci series up to n terms using a for loop.
+ */
+
+public class FibonacciSeries {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Please enter number: ");
+		int n = sc.nextInt();
+		int fib = 0;
+		
+		for(int i = 2; i <= n; i++) {
+			if(n == 0 && n == 1){
+				fib = 1;
+				break;
+			}
+			fib = i + (i - 1);
+		}
+		
+		System.out.println("Fibonacci is: "+fib);
+
+	}
+
+}

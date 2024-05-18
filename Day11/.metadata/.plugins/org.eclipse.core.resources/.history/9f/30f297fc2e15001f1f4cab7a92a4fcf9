@@ -1,0 +1,32 @@
+package com.app;
+
+import java.util.Scanner;
+
+public class DecimalToBinaryConversion {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter positive integer number: ");
+		int n = sc.nextInt();
+		int temp = 0, binaryNum = 0, q, rem = 0;
+		int originalNum = n;
+
+		//iterate loop till n is equal to 0
+		while(n != 0) {
+			rem = n % 2;
+			temp = temp * 10 + rem;
+			q = n / 2;
+			n = q;
+		}
+
+		//To get binary Number
+		for(int i = temp; i != 0; i /=10) {
+			int digit = i % 10;
+			i = i /10;
+			binaryNum = binaryNum * 10 + digit;
+		}
+
+		System.out.println("Binary number of "+originalNum+" is:"+binaryNum);
+		sc.close();
+	}
+}

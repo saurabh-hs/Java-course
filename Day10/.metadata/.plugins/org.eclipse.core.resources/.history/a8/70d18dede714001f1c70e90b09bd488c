@@ -1,0 +1,30 @@
+package com.app;
+
+import java.util.Scanner;
+
+public class ArmstrongNumberCheck {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Please enter a number: ");
+		int num = sc.nextInt();
+
+		int originalNum = num;
+		int armstrongNumber = 0;
+
+		//logic for armstrong number
+		for(int temp = num; temp !=0; temp /= 10) {
+			int digit = temp % 10;
+			armstrongNumber = armstrongNumber + (digit * digit * digit);
+		}
+
+		//check number is armstrongNumber or not
+		if(originalNum == armstrongNumber) {
+			System.out.println(originalNum+" is a Armstrong number");
+		} else{
+			System.out.println(originalNum+" is not a Armstrong number");
+		}
+	}
+}

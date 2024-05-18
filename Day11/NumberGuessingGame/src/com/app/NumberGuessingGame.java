@@ -1,0 +1,41 @@
+package com.app;
+
+import java.util.Scanner;
+import java.util.Random;
+
+/*
+ * Create a number guessing game where the computer randomly selects a number between 1 and 100, and the user has to guess it. 
+ * The program should provide feedback if the guess is too high or too low, and continue until the user guesses correctly using 
+ * a while loop.
+ */
+
+public class NumberGuessingGame {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Random rand = new Random(); 
+		int computerGenerateNum = rand.nextInt(100) + 1;
+		int count = 0;
+		int userGuessNum = 0;
+		
+		System.out.println("Guess number between 1 to 100: ");
+		
+		//Loop until the user guesses the number correctly
+		while(computerGenerateNum != userGuessNum) {
+			userGuessNum = sc.nextInt();
+			count++;
+			//if statement to give feedback to user
+			if(userGuessNum > computerGenerateNum) {
+				System.out.println("Too high! Try again");
+			}else if(userGuessNum < computerGenerateNum) {
+				System.out.println("Too low! Try again");
+			}
+		}
+
+		System.out.println("Congratulations you win!! It took you " + count + " attempts.");
+
+		sc.close();
+
+	}
+
+}

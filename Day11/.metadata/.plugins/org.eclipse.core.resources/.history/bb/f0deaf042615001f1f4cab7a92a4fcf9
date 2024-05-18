@@ -1,0 +1,33 @@
+package com.app;
+
+import java.util.Scanner;
+
+/*
+ * Write a program that takes a positive integer n and applies the following rules: if n is even, divide it by 2; if n is odd, 
+ * multiply it by 3 and add 1. Repeat the process until n becomes 1, and count the number of steps taken using a while loop.
+ */
+
+public class CollatzConjecture{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		//take positive integer number as a input from user
+		System.out.println("Enter a positive integer: ");
+		int n = sc.nextInt();
+		int steps = 0;
+		
+		//loop until n becomes 1 and logic of collatz Conjecture
+		while(n != 1) {
+			if(n % 2 == 0) {
+				n /= 2;
+			}else if(n % 2 != 0) {
+				n = (n * 3) + 1;
+			}
+			
+			steps++;
+		}
+
+		System.out.println("Number of steps taken to reach 1: " + steps);
+		sc.close();
+	}
+}
