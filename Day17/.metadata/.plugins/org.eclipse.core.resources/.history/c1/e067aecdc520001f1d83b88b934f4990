@@ -1,0 +1,15 @@
+package com.app;
+
+/*
+ * Write a program to create a HashMap where keys are student names and values are their grades. Add at least five entries and 
+ * then print all the key-value pairs.
+ */
+
+public class HashMapExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

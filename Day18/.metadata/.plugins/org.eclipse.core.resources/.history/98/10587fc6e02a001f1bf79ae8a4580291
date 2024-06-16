@@ -1,0 +1,47 @@
+package com.app;
+
+import java.util.Comparator;
+
+public class Person implements Comparator<Person>{
+	//Field of Person class
+	int age;
+	String name;
+	String country;
+	
+	//Constructor of Person class
+	public Person(int age, String name, String country) {
+		this.age = age;
+		this.name = name;
+		this.country = country;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [age=" + age + ", name=" + name + ", country=" + country + "]";
+	}
+
+	@Override
+	public int compare(Person o1, Person o2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+//	@Override
+//	public int compareTo(Person that) {
+//		if(this.age == that.age && this.name.equals(that.name)) {
+//			return this.country.compareTo(that.country);
+//		}else if(this.age == that.age) {
+//			return this.name.compareTo(that.name);
+//		}
+//		return this.age - that.age;
+//	}
+
+	
+	
+//	public String toString() {
+//		return "Age: "+age+" Name: "+name+" Country: "+country+"\n";
+//	}
+	
+	
+	
+}

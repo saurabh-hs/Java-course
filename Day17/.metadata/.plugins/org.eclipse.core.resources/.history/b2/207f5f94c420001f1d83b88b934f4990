@@ -1,0 +1,27 @@
+package com.app;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/*
+ * Create a HashSet of strings. Add some duplicate and non-duplicate strings to it. Print the set and 
+ * observe the order and duplicates.
+ */
+
+public class HashSetExample {
+
+	public static void main(String[] args) {
+		Set<String> names = new HashSet<>();
+		
+		names.add("Alice");
+		names.add("Bob");
+		names.add("Clark");
+		names.add("Alice"); //duplicate entry
+		
+		for(String name : names) {
+			System.out.println(name);
+		}
+
+	}
+
+}

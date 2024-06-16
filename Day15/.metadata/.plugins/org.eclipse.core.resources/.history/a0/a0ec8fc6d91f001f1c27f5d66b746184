@@ -1,0 +1,20 @@
+package com.app;
+
+public class Person {
+	//Private Field of Person class
+	private int age;
+	
+	//Getter method for age
+	public int getAge() {
+		return age;
+	}
+	
+	//Setter method for age with validation
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

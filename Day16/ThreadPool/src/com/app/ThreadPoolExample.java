@@ -1,0 +1,59 @@
+package com.app;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
+//class Task which implements Runnable interface
+class Task implements Runnable {
+	//Field of Task class
+	private final int taskId;
+	
+	//Constructor of Task class
+	public Task(int taskId) {
+		this.taskId = taskId;
+	}
+
+	//Override run method
+	@Override
+	public void run() {
+		System.out.println("Task "+taskId+" is being executed by "+Thread.currentThread().getName());
+		try {
+			//Simulate some work with sleep
+			Thread.sleep(1000);
+		}catch(InterruptedException e) {
+			System.out.println("Task "+taskId+" was interrupted.");
+		}
+		System.out.println("Task "+taskId+" is finished.");	
+	}
+}
+
+public class ThreadPoolExample {
+
+	public static void main(String[] args) {
+		//Create a thread pool with fixed number of threads
+		int numberOfThreads = 3;
+		ExecutorService executorService = Executors.newFixedThreadPool(numberOfThreads);
+		
+		//submit task to the executor service
+		for(int i = 1; i <= 10; i++) {
+			Task task = new Task(i);
+			executorService.submit(task);
+		}
+		
+		//Shut down the executor service
+		executorService.shutdown();
+		
+		try {
+			//wait for all task to complete
+			if(!executorService.awaitTermination(60, TimeUnit.SECONDS)) {
+				executorService.shutdownNow();
+			}
+		}catch (InterruptedException e) {
+			executorService.shutdownNow();
+		}
+		
+		System.out.println("All task have been completed");
+	}
+
+}

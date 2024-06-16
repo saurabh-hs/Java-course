@@ -1,2 +1,2 @@
 # Java-course
-This is my java course repo which contains java codes, which I write while my study journey of java course.
+This is my Java Course repo which contains Java code. In this repo, some practice questions are available on most of the Java topics.

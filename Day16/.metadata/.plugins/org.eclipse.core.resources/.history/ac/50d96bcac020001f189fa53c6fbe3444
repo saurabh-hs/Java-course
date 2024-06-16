@@ -1,0 +1,43 @@
+package com.app;
+
+//DaemonThread class
+class DaemonThread extends Thread {
+	//Override run method to start Thread
+	@Override
+	public void run() {
+		try {
+			while(true) {
+				System.out.println("Daemon thread is running...");
+				Thread.sleep(1000); //Sleep for 1 second
+			}
+		}catch(InterruptedException e) {
+			System.out.println("Daemon thread was interrupted.");
+		}finally {
+			System.out.println("Daemon thread is exiting.");
+		}
+	}
+}
+
+
+public class DaemonThreadExample {
+
+	public static void main(String[] args) {
+		//Create a thread and set it as a daemon thread
+		DaemonThread daemonThread = new DaemonThread();
+		daemonThread.setDaemon(true);
+		
+		//Start the daemon thread
+		daemonThread.start();
+		
+		//Main thread sleeps for 3 seconds to allow the daemon thread to run
+		try {
+			//Thread.sleep(3000);
+			daemonThread.join();
+		}catch(InterruptedException e) {
+			System.out.println("Main thread was interrupted");
+		}
+		
+		System.out.println("Main Thread is terminating.");
+	}
+
+}

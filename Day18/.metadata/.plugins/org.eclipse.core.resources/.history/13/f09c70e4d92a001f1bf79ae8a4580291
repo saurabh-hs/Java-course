@@ -1,0 +1,32 @@
+package com.app;
+
+public class Person implements Comparable{
+	//Field of Person class
+	int age;
+	String name;
+	String country;
+	
+	//Constructor of Person class
+	public Person(int age, String name, String country) {
+		this.age = age;
+		this.name = name;
+		this.country = country;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [age=" + age + ", name=" + name + ", country=" + country + "]";
+	}
+
+	
+	public int compareTo(Person that) {
+		return this.age - that.age;
+	}
+	
+//	public String toString() {
+//		return "Age: "+age+" Name: "+name+" Country: "+country+"\n";
+//	}
+	
+	
+	
+}

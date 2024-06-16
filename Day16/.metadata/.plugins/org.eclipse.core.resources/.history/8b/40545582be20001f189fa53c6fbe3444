@@ -1,0 +1,29 @@
+package com.app;
+
+//DemonThread class
+class DemonThread extends Thread {
+	//Override run method to start Thread
+	@Override
+	public void run() {
+		try {
+			while(true) {
+				System.out.println("Demon thread is running...");
+				Thread.sleep(1000); //Sleep for 1 second
+			}
+		}catch(InterruptedException e) {
+			System.out.println("Demon thread was interrupted.");
+		}finally {
+			System.out.println("Demon thread is exiting.");
+		}
+	}
+}
+
+
+public class DemonThreadExample {
+
+	public static void main(String[] args) {
+		//Create a thread and set it as a daemon 
+
+	}
+
+}

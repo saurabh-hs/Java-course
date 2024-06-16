@@ -1,0 +1,46 @@
+package com.app;
+
+//Shared Counter class
+class Counter{
+	//field of Counter class
+	private int count=0;
+	
+	//Synchronized method to increment the counter
+	public synchronized void increment() {
+		count++;
+	}
+	
+	//Method to get the current value of the counter
+	public int getCount() {
+		return count;
+	}
+}
+
+//Thread class that increment the counter
+class CounterIncrementer extends Thread {
+	//Field of CounterIncrementer class
+	private Counter counter;
+	private int numIncrement;
+	
+	//Constructor to initialize the counter and the number
+	public CounterIncrementer(Counter counter, int numIncrement) {
+		this.counter = counter;
+		this.numIncrement = numIncrement;
+	}
+	
+	@Override
+	public void run() {
+		for(int i=0; i < numIncrement; i++) {
+			counter.increment();
+		}
+	}
+}
+
+public class SynchronizedCounterExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

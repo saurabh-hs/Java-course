@@ -1,0 +1,37 @@
+package com.app;
+
+import java.util.Stack;
+
+public class StackExample {
+
+	public static void main(String[] args) {
+		//Create object of stack class
+		Stack<String> textEditor = new Stack<>();
+		
+		//addText method to add text from text editor
+		addText(textEditor, "Leo is a boy");
+		addText(textEditor, "Alicy is a person");
+		addText(textEditor, "Ram is a indian boy");
+		addText(textEditor, "Apple is a fruit");
+		
+		//get the element and then delete text from text editor
+		while(!textEditor.isEmpty()) {
+			System.out.println("Deleted Text is: "+getElement(textEditor));
+			deleteText(textEditor);
+		}
+		
+	}
+	
+	public static void addText(Stack<String> stack, String text) {
+		stack.add(text);
+	}
+	
+	public static void deleteText(Stack<String> textEditor) {
+		textEditor.pop();
+	}
+	
+	public static String getElement(Stack<String> textEditor) {
+		return (String) textEditor.peek();
+	}
+
+}

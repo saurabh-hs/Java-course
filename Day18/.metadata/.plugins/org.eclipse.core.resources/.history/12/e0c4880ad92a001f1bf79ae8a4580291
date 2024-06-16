@@ -1,0 +1,21 @@
+package com.app;
+
+public class Person{
+	//Field of Person class
+	int age;
+	String name;
+	String country;
+	
+	//Constructor of Person class
+	public Person(int age, String name, String country) {
+		this.age = age;
+		this.name = name;
+		this.country = country;
+	}
+	
+	public String toString() {
+		return "[Age: "+age+" Name: "+name+" State: "+country+"]";
+	}
+
+	
+}

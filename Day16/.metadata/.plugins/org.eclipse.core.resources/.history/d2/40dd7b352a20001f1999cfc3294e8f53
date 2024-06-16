@@ -1,0 +1,48 @@
+package com.app;
+
+class MessageThread extends Thread {
+	//Override run method
+	@Override
+	public void run() {
+		try {
+			while(!isInterrupted()) {
+				System.out.println("Thread is running");
+				Thread.sleep(1000); //sleep for 1 second
+			}
+		}catch(InterruptedException e) {
+			//This block will execute when the thread interrupt during sleep
+			System.out.println(getName()+" Thread was interrupted");
+		}
+		System.out.println(getName()+" Thread is stopped gracefully");
+	}
+}
+
+public class InterruptThreadExample {
+
+	public static void main(String[] args) {
+		//Create and start the thread
+		MessageThread thread = new MessageThread();
+		thread.start();
+		
+		//Main thread sleep for 5 seconds before interrupting the message thread
+		try {
+			Thread.sleep(5000);
+		}catch(InterruptedException e) {
+			System.out.println("Main thread was interrupted");
+		}
+		
+		//Interrupt the message thread
+		thread.interrupt();
+		
+		//Wait for the message thread to finish
+		try {
+			thread.join();
+		}catch(InterruptedException e) {
+			System.out.println("Main thread was interrupted while waiting for the message thread to finish.");
+		}
+		
+		System.out.println("Main thread is exiting.");
+
+	}
+
+}

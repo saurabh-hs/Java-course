@@ -1,0 +1,52 @@
+package com.app;
+
+class Book {
+	//Field of Book class
+	private String title;
+	private String author;
+	
+	//Contructor of Book class
+	public Book(String title, String author) {
+		this.title = title;
+		this.author = author;
+	}
+	
+	//Getters for title and author
+	public String getTitle() {
+		return this.title;
+	}
+	
+	public String getAuthor() {
+		return this.author;
+	}
+	
+	//Overriding finalize method
+	@SuppressWarnings("deprecation")
+	@Override
+	protected void finalize() throws Throwable {
+		try {
+			System.out.println("The Book object: "+title+" by"+author+" is being destroyed.");
+		}finally {
+			super.finalize();
+		}
+	}
+	
+}
+
+public class ConstructorAndGarbageCollector {
+
+	public static void main(String[] args) {
+		//Creating a Book object
+		Book myBook = new Book("Java","Jonh wick");
+		
+		//Printing the details of book
+		System.out.println("Title: "+myBook.getTitle());
+		System.out.println("Author: "+myBook.getAuthor());
+		
+		//Suggesting garbage collection to observe finalize method (not guaranteed)
+		myBook = null;
+		System.gc();
+
+	}
+
+}

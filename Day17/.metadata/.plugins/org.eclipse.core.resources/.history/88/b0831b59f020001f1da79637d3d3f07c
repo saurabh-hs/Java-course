@@ -1,0 +1,25 @@
+package com.app;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class IterationOverACollection {
+
+	public static void main(String[] args) {
+		List<String> stringList = new LinkedList<>();
+		
+		//Add serveral string into LinkedList
+		stringList.add("Ram");
+		stringList.add("Gopal");
+		stringList.add("Leo");
+		stringList.add("Spider man");
+		stringList.add("Super man");
+		
+		//normal for loop
+		for(int i=0; i < stringList.size(); i++) {
+			System.out.println(stringList.get(i));
+		}
+
+	}
+
+}

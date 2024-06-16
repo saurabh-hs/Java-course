@@ -1,0 +1,38 @@
+package com.app;
+
+class Person {
+	//Field of Person class
+	private String name;
+	private int age;
+	
+	//Constructor of Person class
+	public Person(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	//Getters
+	public String getName() {
+		return name;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	
+	//Override toString method for easy printing
+	@Override
+	public String toString() {
+		return "Person{Name: "+name+" , age: "+age+"}";
+	}
+}
+
+public class CustomObjectsInCollection {
+
+	public static void main(String[] args) {
+		//Create object of Person class
+		
+
+	}
+
+}
