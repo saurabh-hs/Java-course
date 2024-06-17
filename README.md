@@ -1,6 +1,5 @@
 # JavaCourse
 This is my Java Course repo which contains Java code. In this repo, some practice questions are available on most Java topics.
-Java Topics covered are below:
 1.Introduction to Java
 Overview of Java
 History of Java
